@@ -65,7 +65,7 @@ async function toolResponse(result: CaptureResult) {
 }
 
 export function createMcpServer(): McpServer {
-  const server = new McpServer({ name: "vuln-screenshot", version: "0.1.0" });
+  const server = new McpServer({ name: "vuln-screenshot", version: "0.0.1" });
 
   server.registerTool(
     "capture_http_evidence",
