@@ -1,0 +1,10 @@
+node_modules/
+dist/
+artifacts/
+playwright-report/
+test-results/
+.DS_Store
+*.tgz
+
+# Local visual comparison notes contain machine-specific paths.
+/design-qa.md

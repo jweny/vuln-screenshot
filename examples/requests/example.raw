@@ -1,0 +1,6 @@
+GET / HTTP/1.1
+Host: example.com
+User-Agent: vuln-screenshot-example/0.1
+Accept: text/html
+Connection: close
+

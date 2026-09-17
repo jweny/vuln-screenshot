@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/jweny/vuln-screenshot/security/advisories/new
+    about: Use private vulnerability reporting for security-sensitive details.

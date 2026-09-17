@@ -1,0 +1,2 @@
+# Preserve exact protocol bytes and CRLF terminators in raw evidence fixtures.
+*.raw binary

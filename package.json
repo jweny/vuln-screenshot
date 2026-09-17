@@ -1,0 +1,71 @@
+{
+  "name": "vuln-screenshot",
+  "version": "0.1.0",
+  "description": "Capture HTTP and terminal evidence as reproducible screenshot bundles",
+  "keywords": [
+    "security",
+    "evidence",
+    "screenshot",
+    "http",
+    "terminal",
+    "mcp"
+  ],
+  "homepage": "https://github.com/jweny/vuln-screenshot#readme",
+  "bugs": {
+    "url": "https://github.com/jweny/vuln-screenshot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweny/vuln-screenshot.git"
+  },
+  "license": "Apache-2.0",
+  "author": "jweny",
+  "type": "module",
+  "files": [
+    "dist",
+    "scripts/fix-node-pty-permissions.mjs"
+  ],
+  "bin": {
+    "vuln-screenshot": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsx --test tests/**/*.test.ts",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build",
+    "postinstall": "node scripts/fix-node-pty-permissions.mjs",
+    "start": "tsx src/cli.ts",
+    "install-browser": "playwright install chromium"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@xterm/addon-serialize": "^0.14.0",
+    "@xterm/headless": "^6.0.0",
+    "ansi-to-html": "^0.7.2",
+    "iconv-lite": "^0.7.0",
+    "node-pty": "^1.1.0",
+    "playwright": "^1.55.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "allowScripts": {
+    "node-pty@1.1.0": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": false
+  }
+}
